@@ -1,0 +1,53 @@
+header.flex{
+  justify-content: space-between;
+  padding:0 2.4rem ;
+  margin-top: 1.2rem;
+  }
+header.flex nav{
+  background-color: var(--bgHeader);
+  padding: 0.77rem 1.6rem;
+  border-radius: 55px;
+  box-shadow: 2px 2px 2px rgba(54, 40, 40, 0.352);
+}
+  header ul.flex{
+gap: 16px;
+
+}
+header ul li a{
+  color:var(--title);
+  opacity: 0.9;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+header ul li a:hover{
+  color:var(--blue);
+  opacity:1;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+header button{
+ font-size: 1.2rem;
+}
+header button.menu{
+  display: none;
+}
+header .fixed{
+  position: fixed;
+  /* top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; */
+  inset:0; 
+  background-color: rgba(40, 40,48,0.91);
+  z-index: 11;
+}
+
+
+
+
+@media(max-width:700px){
+header.flex nav{display: none;}
+header button.menu{
+  display: block;
+}
+}
