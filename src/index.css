@@ -3,10 +3,16 @@ html{
   font-family: 'Roboto' , sans-serif;
  letter-spacing: 1px;
 }
+html{
+  box-sizing: border-box;
+}
+*,*:before,*:after{
+  box-sizing: inherit;
+}
 *{
   margin: 0;
    padding: 0; 
-  box-sizing: border-box;
+
 }
 :root{
   --primary: #000;
@@ -16,7 +22,9 @@ html{
   --subtitle:rgb(161 161 170);
   --bgHeader:rgb(39 39 42);
   --blue:rgb(93 188 252);
+  --icon-hover:#d4d4d8;
 
+  --container-padding:4.8rem;
 }
 .light{
   --primary: #fff;
@@ -31,12 +39,14 @@ body {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   background-color: var(--secondary);
+  padding: 0 var(--container-padding);
 }
 .divider{
-  border-bottom: 2px solid var(--border) ;
+ border-bottom: 2px solid var(--border) ;
  margin:3rem 0;
+ width:calc(100% + var(--container-padding) + var(--container-padding));
+ margin-left: calc(-1 * var(--container-padding));
 }
 li{
   list-style: none;
@@ -51,5 +61,39 @@ a{
   align-items: center;
 }
 .border{
-  border: 1px solid rgb(249, 7, 7);
+  border: 1px solid rgb(161, 10, 10);
 }
+button{
+  all: unset;}
+  button:hover{
+    cursor:pointer;
+  }
+  button:hover:active{
+  scale: 0.95;
+  }
+  a{
+    all: unset;
+    transition:0.2s
+  }
+  a:hover{
+    cursor:pointer;
+  }
+  @media(max-width:1000px){
+    
+    .container{
+    --container-pdding: 1.7rem;
+     width: 90%;
+     padding: 0 var(--container-padding);
+    }
+    .divider{
+      width:calc(100% + var(--container-padding) + var(--container-padding));
+      margin-left: calc(-1 * var(--container-padding));
+     }
+   }
+  @media(max-width:600px){
+   .container{
+    width: 98%;
+    padding: 0 var(--container-padding);
+   }
+  
+  }

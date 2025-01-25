@@ -1,3 +1,14 @@
+/* table of contents
+****************
+
+1. header design
+2.icons & buttons
+3. Modals
+4. Media queries
+ */
+
+
+   /* 1. header design */
 header.flex{
   justify-content: space-between;
   padding:0 2.4rem ;
@@ -31,6 +42,36 @@ header button{
 header button.menu{
   display: none;
 }
+/* icons & buttons */
+header .icon-menu, header button.mode{
+  background-color: var(--bgHeader);
+  height: 2.4rem;
+  width: 2.4rem;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  color: var(--subtitle);
+  border:1px solid rgba(244,165,96,0.249);
+  transition:0.2s
+}
+header .icon-menu:hover, header button.mode:hover{
+  border:1px solid rgb(244,165,96); 
+  color: var(--title);
+}
+header .icon-close{
+  font-size: 1.5rem;
+  color: var(--subtitle);
+  transition: 0.3s;
+
+}
+header .icon-close:hover{
+  font-size: 1.7rem;
+  color: crimson;
+  rotate: 180deg;
+}
+
+
+/* Modals */
 header .fixed{
   position: fixed;
   /* top: 0;
@@ -41,10 +82,44 @@ header .fixed{
   background-color: rgba(40, 40,48,0.91);
   z-index: 11;
 }
+@keyframes mymove{
+  0%{scale:0;}
+  60%{scale:1.2;}
+  100%{scale:1;}
+ }
 
+header .fixed ul.modal{
 
+ animation: mymove 0.7s 1 ;
+  width:75% ;
+  margin-left:auto ;
+  margin-right:auto ;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem  ;
+  background-color: var(--secondary);
+}
 
+header .fixed ul.modal li{
+  border-bottom: 1px solid var(--border) ;
+  padding-bottom: 0.77rem;
+  padding-top: 0.5rem;
+}
 
+header .fixed ul.modal li:last-child{
+border: none;
+}
+header .fixed ul.modal li a{
+  font-size: 1rem;
+}
+header .fixed ul.modal li:first-child{
+text-align: right;
+border:none;
+padding-bottom: 0;
+padding-top: 0.2rem;
+margin-bottom: -1rem;
+}
+/* responsive design media queries */
 @media(max-width:700px){
 header.flex nav{display: none;}
 header button.menu{
