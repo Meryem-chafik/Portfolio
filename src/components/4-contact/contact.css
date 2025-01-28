@@ -1,0 +1,60 @@
+/*****************table of contents*****************
+1.left section=>contact form
+
+ */
+/*****************1.left section=>contact form*****************/
+ section.contact-us .icon-envelope{
+  font-size: 1.8rem;
+  color: var(--subtitle);
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+
+ }
+ section.contact-us .title{
+  font-size: 2.1rem;
+  color: var(--title);
+  margin-bottom: 1rem;
+ }
+ section.contact-us .subtitle{
+  font-size: 1.1rem;
+  color: var(--subtitle);
+  margin-bottom: 2rem;
+  line-height: 1.65rem;
+  
+ }
+ section.contact-us .email{
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  color: var(--subtitle);
+  transition: 0.3s;
+  padding: 10px;
+  text-align: center;
+ }
+
+ section.contact-us .cv-link{
+  text-decoration: none;
+  color: var(--subtitle);
+  font-size: 1.1rem;
+  transition: 0.3s;
+  padding: 10px;
+  text-align: center;
+}
+section.contact-us .email:hover ,section.contact-us .cv-link:hover{
+  color: #d4d4d8f4;
+  font-size: 1.2rem;
+}
+section.contact-us form{
+  border: 1px solid rgba(93,188, 252, 0.3);
+  transition: 0.3s;
+  border-radius: 5px;
+  background-image: linear-gradient(
+   rgba(255,255,255,0.05),
+   rgba(255,255,255,0.05)
+   );
+   text-align: center;
+}
+section.contact-us form:hover{
+  border: 1px solid var(--blue);
+  scale: 1.01;
+  cursor: pointer;
+}
