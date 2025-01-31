@@ -40,12 +40,15 @@ main.flex{
   border: 1px solid var(--blue);
   
  }
+ .light main section.left-section.flex button.active{
+  border: 1px solid #1f2937;
+ }
 
 
 
  /***************2.right section=>cards***************/
  main section.right-section.flex{
-  /* flex-grow: 1; */
+  flex-grow: 1;
   justify-content: center;
  flex-wrap: wrap;
  column-gap: 16px;
@@ -59,23 +62,43 @@ main.flex{
   rgba(255,255,255,0.05),
   rgba(255,255,255,0.05)
   );
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
+
 .card:hover{
   border: 1px solid var(--blue);
   rotate: 1deg;
   scale: 1.01;
   cursor: pointer;
 }
+.light .card{
+  /* border: none; */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.9)
+  );
+  
+}
+.light .card:hover{
+  /* border: none;
+   */
+   border: 1px solid #2563eb;
+}
 .card img{
   border-radius: 5px;
- }
+ 
+}
 
 .card .box{
   padding: 1rem 0.4rem;
 }
 .card .box .title{
   color: var(--title);
+  text-transform: capitalize;
 }
 .card .box .subtitle{
   color: var(--subtitle);
@@ -102,6 +125,84 @@ main.flex{
   color: var(--blue);
   margin-right: 12px;
 }
+/*****************skills grid******************/
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste automatiquement */
+  gap: 15px;
+  padding: 10px;
+  max-width: 100%; /* Prend toute la largeur disponible */
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center; /* Centre verticalement */
+}
+
+/* Styles des cartes */
+.skillCard {
+  border: 1px solid rgba(93, 188, 252, 0.3);
+  transition: 0.3s;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  );
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.light .skillCard{
+  /* border: none; */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  /* color: #000;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  margin: ; */
+}
+.light .skillCard:hover{
+  /* border: none;
+   */
+   border: 1px solid #2563eb;
+}
+/* Effet au survol */
+.skillCard:hover {
+  transform: scale(1.05);
+  border: 1px solid var(--blue);
+  cursor: pointer;
+}
+.light .skillContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.light .skillIcon {
+  font-size: 2rem;
+}
+
+.light .skillName {
+  font-weight: bold;
+  color: var(--title);
+}
+.skillContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.skillIcon {
+  font-size: 2rem;
+}
+
+ .skillName {
+  font-weight: bold;
+  color: var(--title);
+}
+
 /*****************responsive design******************/
 @media(max-width:600px){
   main.flex{
@@ -121,4 +222,19 @@ main.flex{
     padding: 0.8rem 0;
     font-size: 0.9rem;
    }
-}
+   .gridContainer {
+    display: flex;
+    flex-direction: column; /* Force l'organisation en colonne */
+    align-items: center; /* Centre horizontalement */
+  }
+
+  .skillCard {
+    width: 90%; /* Prend presque toute la largeur */
+    max-width: 300px; /* Limite la taille */
+    margin-bottom: 15px; /* Ajoute de l'espace entre les cartes */
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  }

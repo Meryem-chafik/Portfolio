@@ -2,7 +2,7 @@ import React from "react";
 import "./hero.css";
 const Hero = () => {
   return (
-    <section className="hero flex">
+    <section id="about" className="hero flex">
       <div className="left-section ">
         <div className="parent-avatar flex">
           <img src="./mee.png" className="avatar" alt="" />
@@ -16,13 +16,30 @@ const Hero = () => {
           impactful solutions.
         </p>
         <div className="icons flex">
-          <div className="icon icon-twitter"></div>
-          <div className="icon icon-instagram"></div>
-          <div className="icon icon-github"></div>
-          <div className="icon icon-linkedin"></div>
+          {/* <div className="icon icon-twitter"></div> */}
+          <a
+            href="mailto:mchafikdev@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="icon icon-envelope"></div>
+          </a>
+          <a
+            href="https://github.com/projects"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="icon icon-github"></div>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/meryem-chafik-99143b272/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="icon icon-linkedin"></div>
+          </a>
         </div>
       </div>
-      <div className="right-section animation border">animation</div>
     </section>
   );
 };

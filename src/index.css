@@ -5,6 +5,7 @@ html{
 }
 html{
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,*:before,*:after{
   box-sizing: inherit;
@@ -26,9 +27,19 @@ html{
 
   --container-padding:4.8rem;
 }
-.light{
-  --primary: #fff;
-}
+  .light {
+    --primary: #f8f9fa;
+    --secondary:  #ffffff;
+    --border: rgba(0, 0, 0, 0.1);
+    --title: #212529;
+    --subtitle: #495057;
+    --bgHeader: #e9ecef;
+    --blue: #007bff;
+    --icon-hover: #6c757d;
+    --container-padding: 4.8rem;
+  }
+  
+
 body {
   background-color: var(--primary);
   color:#fff;
@@ -78,6 +89,29 @@ button{
   a:hover{
     cursor:pointer;
   }
+
+  ::-webkit-scrollbar {
+    width:.8rem;
+}
+
+::-webkit-scrollbar-track {
+    border: 7px solid #292c3b;
+    box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    background-color: #d4d4d8;
+}
+
+::-webkit-scrollbar-thumb {
+    background:#888;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
   @media(max-width:1000px){
     
     .container{

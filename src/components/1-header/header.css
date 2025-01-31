@@ -54,6 +54,9 @@ header .icon-menu, header button.mode{
   border:1px solid rgba(244,165,96,0.249);
   transition:0.2s
 }
+header .icon-sun{
+  color: rgb(255, 165,0);
+}
 header .icon-menu:hover, header button.mode:hover{
   border:1px solid rgb(244,165,96); 
   color: var(--title);
