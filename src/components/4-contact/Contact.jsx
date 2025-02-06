@@ -1,5 +1,4 @@
-import lottie from "lottie-react";
-import animationContact from "../../../public/animationContact.json";
+import animationContact from "../../assets/AnimtionContact.json";
 import "./contact.css";
 import Lottie from "lottie-react";
 const Contact = () => {
