@@ -59,19 +59,15 @@ const Header = () => {
               />
             </li>
             <li>
-              <a href="">About</a>
+              <a href="#about">About</a>
             </li>
+
             <li>
-              <a href="">Articles</a>
+              <a href="#work">Work</a>
             </li>
+
             <li>
-              <a href="">Projects</a>
-            </li>
-            <li>
-              <a href="">Speaking</a>
-            </li>
-            <li>
-              <a href="">Uses</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>
